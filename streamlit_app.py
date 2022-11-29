@@ -67,11 +67,10 @@ streamlit.header("The fruit load list contains")
 streamlit.dataframe(my_data_rows)
 
 def insert_row_snowflake(new_fruit):
-         with my_cnx.cursor() as my cur:
+    with my_cnx.cursor() as my cur:
             my_cur.execute ("insert into fruit_load_list values ('from streamlit')")
-         return("Thanks for adding " + new_fruit
+    return("Thanks for adding " + new_fruit
         
-try:
    add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 
 if streamlit.button ('Add a fruit to the list'):
